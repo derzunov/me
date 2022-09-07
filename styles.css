@@ -6,9 +6,9 @@ body {
     font-family: 'Muli', sans-serif;
     overflow: hidden;
     margin: 0;
-    /*background: #09141b;*/
+    background: #09141b;
     /*background: #181625;*/
-    background: #202120;
+    /*background: #202120;*/
     color: #fff;
     height: 100vh;
     display: flex;
@@ -29,14 +29,12 @@ body {
 .card {
     position: relative;
     border-radius: 5px;
-
-    /*background: #262626;*/
+    margin-right: -16px;
 }
 
 .card .title {
     font-size: 4em;
     margin-bottom: 5px;
-    margin-right: -10px;
 }
 
 .card .subtitle {
