@@ -33,21 +33,14 @@ body {
 }
 
 .card .title {
-    font-size: 4em;
-    margin-bottom: 5px;
+    height: 80px;
+    font-size: 64px;
+    margin: 0 0 5px 0;
+    position: relative;
 }
 
-.card .subtitle {
-    font-size: 0.7em;
-    margin: 0;
-
-    transition: all 0.5s ease-in 0.4s;
-    opacity: 0;
-    position: absolute;
-    left: 35px;
-}
-
-.card .square {
+.card .title:before {
+    content:"";
     display: block;
     width: 90px;
     height: 90px;
@@ -57,17 +50,28 @@ body {
     z-index: -1;
 
     transition: all 0.5s ease-in 0.4s;
-    opacity: 0;
-    top: 22px;
-    left: -26px;
-}
-
-.loaded .square {
     opacity: 1;
-    top: 32px;
+
+    top: -10px;
     left: -16px;
 }
-.loaded .subtitle {
+
+.card .subtitle {
+    font-size: 0.7em;
+    margin: 0;
+
+    transition: all 0.5s ease-in 0.4s;
     opacity: 1;
+    position: absolute;
     left: 0;
+}
+
+.is-not-loaded .title:before {
+    opacity: 0;
+    top: -20px;
+    left: -26px;
+}
+.is-not-loaded .subtitle {
+    opacity: 0;
+    left: 35px;
 }

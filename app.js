@@ -1,5 +1,5 @@
-const container = document.querySelector('.container')
 window.addEventListener('load', () => {
     // Как только страница загрузилась, добавляем на контейнер класс
-    setTimeout(() => container.classList.add('loaded'), 500)
+    const container = document.querySelector('.container')
+    setTimeout(() => container.classList.remove('is-not-loaded'), 500)
 })
