@@ -8,21 +8,53 @@
     <title>Dmitry Erzunov | JavaScript Developer</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="section_1">
       <div class="card is-not-active">
         <h1 class="title">
           derzunov
         </h1>
-        <p class="subtitle">JavaScript/Web/Desktop/Mobile</p>
+        <p class="subtitle">JavaScript / Web / Desktop / Mobile</p>
+      </div>
+      <a href="#section_2" class="scrollArrow scrollTo is-not-active">
+        ❮
+      </a>
+    </div>
+    <div class="container" id="section_2">
+      <div class="menu is-not-active">
+        <a
+            href="https://github.com/derzunov"
+            target="_blank"
+            style="background-image: url('img/octocat.png')"
+            class="menu-item">
+          <p class="menu-item__title">GitHub</p>
+        </a>
+        <a
+            href="https://t.me/derzunov"
+            target="_blank"
+            style="background-image: url('./img/telegram.svg')"
+            class="menu-item">
+          <p class="menu-item__title">Telegram</p>
+        </a>
+        <a
+            href="mailto:derzunov.work@yandex.ru"
+            target="_blank"
+            style="background-image: url('img/mail.svg')"
+            class="menu-item">
+          <p class="menu-item__title">Mail</p>
+        </a>
+        <a
+            href="https://derzunov.github.io/me/exp/"
+            target="_blank"
+            style="background-image: url('img/expo.png')"
+            class="menu-item menu-item_projects">
+          <p class="menu-item__title">Projects</p>
+        </a>
       </div>
     </div>
-    <div class="container">
-      <div class="main-menu">
-        <a target="_blank"  href="https://github.com/derzunov">GitHub</a>
-        <a target="_blank" href="https://t.me/derzunov">Telegram</a>
-        <a href="https://derzunov.github.io/me/exp/">Expo</a>
-      </div>
-    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"></script>
     <script src="app.js"></script>
   </body>
 </html>
