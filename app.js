@@ -9,16 +9,20 @@ window.addEventListener('load', () => {
     }, 1000 )
 })
 
-$( document.body ).on( 'click', 'a.scrollTo', function() {
-    let href = $( this ).attr( 'href' )
+try {
+    $( document.body ).on( 'click', 'a.scrollTo', function() {
+        let href = $( this ).attr( 'href' )
 
-    $( 'html, body' ).animate( {
-        scrollTop: $( href ).offset().top
-    }, {
-        duration: 400,
-        easing: 'swing'
+        $( 'html, body' ).animate( {
+            scrollTop: $( href ).offset().top
+        }, {
+            duration: 400,
+            easing: 'swing'
+        } )
     } )
-} )
+} catch( error ) {
+    console.info( 'jQuery is not imported' )
+}
 
 
 
