@@ -1,4 +1,5 @@
 window.addEventListener( 'load', () => {
+
     // С этими элементами работаю постоянно пи скролле, их надо прикопать в замыкание
     const elementsToActivateOnScroll = document.querySelectorAll( '.is-not-active-on-scroll' )
     const activateOnWindowLoad = () => {
@@ -30,6 +31,8 @@ window.addEventListener( 'load', () => {
     window.addEventListener( 'scroll', () => {
         activateOnScroll()
     } )
+
+    console.info('%cНу-ка, нах, не крути тут ничего!', 'font-size: 30px; color: #f0210d');
 } )
 
 try {
