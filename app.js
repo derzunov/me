@@ -24,7 +24,7 @@ window.addEventListener( 'load', () => {
     setTimeout( () => {
         activateOnWindowLoad()
         activateOnScroll()
-    }, 1000 )
+    }, 500 )
 
     // Дальше слушаем скролл
     window.addEventListener( 'scroll', () => {
