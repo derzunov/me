@@ -37,7 +37,8 @@ window.addEventListener( 'load', () => {
 } )
 
 try {
-    $( document.body ).on( 'click', 'a.scrollTo', function () {
+    $( document.body ).on( 'click', 'a.scrollTo', function ( event ) {
+        event.preventDefault()
         let href = $( this ).attr( 'href' )
 
         $( 'html, body' ).animate( {
