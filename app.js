@@ -5,32 +5,33 @@ window.addEventListener( 'load', () => {
     const activateOnWindowLoad = () => {
         // С этими элементами работаю один раз, не надо их прикапывать
         document.querySelectorAll( '.is-not-active-on-window-load' ).forEach( ( element ) => {
-                element.classList.remove( 'is-not-active-on-window-load' )
+            element.classList.remove( 'is-not-active-on-window-load' )
         } )
     }
-    const activateOnScroll = () => {
-        const windowCenter = ( window.innerHeight / 2 ) + window.scrollY
 
-        elementsToActivateOnScroll.forEach( ( element ) => {
-            let scrollOffset = element.offsetTop + ( element.offsetHeight / 8 )
-            if ( windowCenter >= scrollOffset ) {
-                element.classList.remove( 'is-not-active-on-scroll' )
+    const intersectionOptions = {
+        rootMargin: '0px',
+        threshold: 0.4
+    }
+    const onIntersect = ( entries, observer ) => {
+        entries.forEach( entry => {
+            if ( entry.isIntersecting ) {
+                entry.target.classList.remove( 'is-not-active-on-scroll' )
             } else {
-                element.classList.add( 'is-not-active-on-scroll' )
+                entry.target.classList.add( 'is-not-active-on-scroll' )
             }
         } )
     }
+    const intersectionObserver = new IntersectionObserver( onIntersect, intersectionOptions )
+
+    elementsToActivateOnScroll.forEach( ( element ) => {
+        intersectionObserver.observe(element)
+    } )
 
     // Небольшая задержка чтобы все исходные шрифты стили успели примениться корректно
     setTimeout( () => {
         activateOnWindowLoad()
-        activateOnScroll()
     }, 500 )
-
-    // Дальше слушаем скролл
-    window.addEventListener( 'scroll', () => {
-        activateOnScroll()
-    } )
 
     console.info('%cНу-ка, нах, не крути тут ничего!', 'font-size: 30px; color: #f0210d');
 } )
