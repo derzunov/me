@@ -1,0 +1,23 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "description": "- [main](https://derzunov.github.io/me)   - [projects](https://derzunov.github.io/me/exp)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derzunov/me.git"
+  },
+  "author": "derzunov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derzunov/me/issues"
+  },
+  "homepage": "https://github.com/derzunov/me#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
